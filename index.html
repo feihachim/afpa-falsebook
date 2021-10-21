@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Falsebook</title>
   </head>
   <body>
@@ -14,7 +14,9 @@
           <ul class="nav-logo">
             <li class="logo">
               <a href="https://icons8.com/icon/118501/facebook"
-                ><img src="https://img.icons8.com/nolan/64/facebook-new.png"
+                ><img
+                  src="https://img.icons8.com/nolan/64/facebook-new.png"
+                  alt="falsebook"
               /></a>
             </li>
             <li>
@@ -26,12 +28,76 @@
               />
             </li>
           </ul>
-          <ul></ul>
-          <ul></ul>
+          <ul>
+            <li><img src="./assets/images/avatar-icon.png" alt="avatar" /></li>
+            <li>AvatarName</li>
+            <li><a href="#">Home</a></li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"
+                ><img src="./assets/images/group-icon.png" alt="group-icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/images/dialog-icon.png" alt="dialog-icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/images/world-icon.png" alt="world-icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/images/secure-icon.png" alt="secure-icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/images/expand-icon.png" alt="expand"
+              /></a>
+            </li>
+          </ul>
         </nav>
       </header>
       <main>
-        <div class="main__card"></div>
+        <div class="main__card">
+          <div class="banner">
+            <div>
+              <div class="big-photo"></div>
+              <div>
+                <h2>Your page name</h2>
+                <i>website</i>
+              </div>
+            </div>
+            <div>
+              <li>
+                <button>
+                  <i class="fa fa-thumbs-up"></i
+                  ><img
+                    src="./assets/images/mini-like-icon.png"
+                    alt="mini-like-icon"
+                  />
+                  Like
+                </button>
+              </li>
+              <li>
+                <button>Follow</button
+                ><!-- --><button>Message</button
+                ><!-- --><button>...</button>
+              </li>
+            </div>
+          </div>
+          <div class="nav-banner">
+            <li><a href="#">Timeline</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Welcome</a></li>
+            <li><a href="#">FWB</a></li>
+            <li><a href="#">More &#9662;</a></li>
+          </div>
+        </div>
         <div class="main__about">
           <div class="about-color">
             <h2>About Your page name</h2>
@@ -44,7 +110,7 @@
           <div class="about-color">
             <p>ABOUT</p>
             <p>Your Address<br />Your city</p>
-            <p>Add Phone number</p>
+            <a href="#">Add Phone number</a>
           </div>
           <div class="about-color">
             <h2>APPS</h2>
@@ -63,12 +129,77 @@
           </div>
         </div>
         <div class="main__messages">
-          <div class=""></div>
-          <div class=""></div>
-          <div class=""></div>
+          <div class="main__message">
+            <div class="message__header">
+              <div class="avatar-mini"></div>
+              <div>
+                <p>
+                  <a href="">Your page name</a> change their
+                  <a href="">cover photo</a>
+                </p>
+                <i>3 minutes ago</i>
+              </div>
+            </div>
+            <div class="image"></div>
+            <div class="message-link">
+              <a href="#">Like</a> - <a href="#">Comment</a> -
+              <a href="#">Share</a>
+            </div>
+          </div>
+          <div class="main__message">
+            <div class="message__header">
+              <div class="avatar-mini"></div>
+              <div>
+                <p><a href="#">Your page name</a></p>
+                <i>December 12,2013</i>
+              </div>
+            </div>
+            <div class="image inactive">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Explicabo placeat praesentium excepturi laborum nesciunt! Nobis.
+            </div>
+            <div class="message-link">
+              <a href="#">Like</a> - <a href="#">Comment</a> -
+              <a href="#">Share</a>
+            </div>
+          </div>
+          <div class="main__message">
+            <div class="message__header">
+              <div class="avatar-mini"></div>
+              <div>
+                <p><a href="#">Your page name</a> created an event</p>
+                <i>September 3,2013</i>
+              </div>
+            </div>
+            <div class="image"></div>
+            <div class="message-link">
+              <a href="#">Like</a> - <a href="#">Comment</a> -
+              <a href="#">Share</a>
+            </div>
+          </div>
         </div>
       </main>
-      <aside></aside>
+      <aside>
+        <div>
+          <li>THIS WEEK</li>
+          <li>UNREAD</li>
+          <li>Notifications</li>
+          <li>Messages</li>
+        </div>
+        <div>
+          <i>Recent</i>
+          <br />
+          <i>2012</i>
+        </div>
+        <div>
+          <a href="#">I love<br />Mac Telephone</a>
+          <div class="image-micro"></div>
+          <p>
+            <a href="#">Like</a> Lakalos<br />
+            Tibor likes this
+          </p>
+        </div>
+      </aside>
     </div>
   </body>
 </html>

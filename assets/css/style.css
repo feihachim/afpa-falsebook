@@ -1,0 +1,280 @@
+:root {
+  --body-color: whitesmoke;
+  --image-color: #4267b2;
+  --div-color: white;
+  --header-color: #3b5998;
+  --link-color: #3347d8;
+  --banner-text-color: black;
+  --banner-line-hover-color: #2663dc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--body-color);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px 10px;
+}
+
+header {
+  background-color: var(--header-color);
+  grid-area: 1/1/2/-1;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+main {
+  grid-area: 2/2/-1/15;
+  display: grid;
+  gap: 10px 10px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 400px 1fr;
+}
+
+.main__card {
+  grid-area: 1/1/2/-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  row-gap: 0;
+}
+
+.main__about {
+  grid-area: 2/1/-1/6;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  background-color: var(--image-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.banner > div {
+  display: flex;
+  column-gap: 10px;
+  padding: 10px;
+  align-items: center;
+}
+
+.banner li {
+  vertical-align: middle;
+}
+
+.about-color {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  background-color: var(--div-color);
+}
+
+.about-color > div {
+  display: flex;
+  background-color: var(--div-color);
+  padding: 10px;
+}
+
+.main__messages {
+  grid-area: 2/6/-1/-1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.app-image {
+  width: 200px;
+  height: 120px;
+  background-color: var(--image-color);
+}
+
+aside {
+  grid-area: 2/15/-1/-1;
+}
+
+#header__search {
+  width: 40vw;
+  height: 40px;
+}
+
+#header__search:focus {
+  outline: none;
+}
+
+nav {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.nav-banner {
+  height: 50px;
+  background-color: var(--div-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.nav-banner a {
+  text-decoration: none;
+  color: var(--banner-text-color);
+}
+
+.nav-banner a:hover {
+  font-weight: bolder;
+  text-decoration: underline var(--banner-line-hover-color);
+  text-decoration-thickness: 3px;
+}
+
+li {
+  list-style-type: none;
+}
+
+nav :is(li, a) {
+  color: var(--div-color);
+}
+
+.logo {
+  background-color: var(--div-color);
+  height: 40px;
+}
+
+nav img {
+  width: 40px;
+  height: auto;
+}
+
+.nav-logo {
+  column-gap: 5px;
+}
+
+.big-photo {
+  width: 150px;
+  height: 200px;
+  background-color: var(--image-color);
+  border: 1px solid var(--banner-text-color);
+  position: relative;
+  bottom: -30px;
+  z-index: 1;
+}
+
+.avatar-mini {
+  width: 40px;
+  height: 40px;
+  background-color: var(--image-color);
+  margin-right: 10px;
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  background-color: var(--image-color);
+}
+
+.inactive {
+  height: auto;
+  background-color: var(--div-color);
+}
+
+.main__message {
+  background-color: var(--div-color);
+}
+
+.main__message > div {
+  margin-bottom: 10px;
+}
+
+.message__header {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 10px;
+}
+
+aside li {
+  background-color: var(--div-color);
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+aside div {
+  background-color: var(--div-color);
+}
+
+button {
+  width: fit-content;
+  height: 30px;
+  vertical-align: middle;
+}
+
+@media (max-width: 1023px) {
+  .container {
+    grid-template-rows: repeat(3, 1fr);
+  }
+  nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 0;
+  }
+  nav ul {
+    background-color: var(--header-color);
+    width: 40vw;
+  }
+
+  main {
+    grid-area: 2/1/3/-1;
+  }
+  aside {
+    grid-area: 3/1/-1/7;
+    flex-direction: row;
+    column-gap: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
